@@ -95,4 +95,6 @@ router.post("/api/v2", function(req, res) {
 });
 
 app.use("/", router);
-app.listen(process.env.port || 3000);
+app.listen(process.env.port || 3000,()=>{
+	console.log("Server is up on port 3000.");
+});
