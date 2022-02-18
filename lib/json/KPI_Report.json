@@ -1,0 +1,35 @@
+[{
+        "date": 1,
+        "BP_Electric": {
+            "ActiveEnergy": 4209.6,
+            "Daily": 0,
+            "Mtd": 0
+        },
+        "PP_Electric": {
+            "ActiveEnergy": 82.6,
+            "Daily": 0,
+            "Mtd": 0.21
+        },
+        "BP_Water": {
+            "ActiveEnergy": 0,
+            "Daily": 0,
+            "Mtd": 0
+        },
+        "PP_Water": {
+            "ActiveEnergy": 2,
+            "Daily": 0,
+            "Mtd": 0
+        },
+        "BP_Steam": {
+            "ActiveEnergy": 0,
+            "Daily": 0,
+            "Mtd": 0
+        },
+        "PP_Steam": {
+            "ActiveEnergy": 3,
+            "Daily": 0,
+            "Mtd": 0
+        }
+    },
+    {}
+]

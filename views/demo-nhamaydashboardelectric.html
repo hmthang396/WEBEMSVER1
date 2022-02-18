@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg" />
+    <title>NK Energy Management</title>
+    <!-- ===== Bootstrap CSS ===== -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- ===== Plugin CSS ===== -->
+    <link href="../plugins/components/morrisjs/morris.css" rel="stylesheet" />
+    <link href="../plugins/components/chartist-js/dist/chartist.min.css" rel="stylesheet" />
+    <link href="../plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet" />
+    <link href="../plugins/components/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- ===== Animation CSS ===== -->
+    <link href="css/animate.css" rel="stylesheet" />
+    <!-- ===== Custom CSS ===== -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- ===== Color CSS ===== -->
+    <link href="css/colors/black-dark.css" id="theme" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+</head>
+
+<body class="mini-sidebar">
+    <!-- ===== Main-Wrapper ===== -->
+    <div id="wrapper">
+        <div class="preloader">
+            <div class="cssload-speeding-wheel"></div>
+        </div>
+        <!-- ===== Top-Navigation ===== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <a class="navbar-toggle font-20 hidden-sm hidden-md hidden-lg" href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="top-left-part">
+                    <a class="logo" href="/">
+                        <b>
+                <img
+                  src="../plugins/images/huda-logo.jpg"
+                  alt="home"
+                  height="60"
+                  style="padding-left: 20px"
+                />
+              </b>
+                        <span>
+                <img
+                  src="../plugins/images/logo.jpg"
+                  alt="homepage"
+                  class="dark-logo"
+                  height="60"
+                  style="padding-left: 70px"
+                />
+              </span>
+                    </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-left hidden-xs">
+                    <li style="padding-left: 35px; padding-top: 8px; padding-right: 5px">
+                        <h4 style="color: #2ecc71">KPI's Factory Report</h4>
+                    </li>
+                    <li style="padding-left: 35px; padding-top: 15px; padding-right: 5px">
+                        <button type="button" class="btn btn-success btn-circle" title="Electrical" onclick="window.location.href='/Electric'">
+                <i class="fa fa-bolt"></i>
+              </button>
+                    </li>
+                    <li style="padding: 5px; padding-top: 15px">
+                        <button type="button" class="btn btn-danger btn-circle" title="Steam" onclick="window.location.href='/Steam'">
+                <i class="fa fa-fire"></i>
+              </button>
+                    </li>
+                    <li style="padding: 5px; padding-top: 15px">
+                        <button type="button" class="btn btn-info btn-circle" title="Water" onclick="window.location.href='/Water'">
+                <i class="fa fa-tint"></i>
+              </button>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li style="padding-top: 12px; padding-right: 8px">
+                        <button class="btn-outline btn-block btn-success btn btn-rounded waves-effect waves-light" type="button" onclick="MonthOfDay()">
+                MTD
+              </button>
+                    </li>
+                    <li style="padding-top: 12px; padding-right: 8px">
+                        <button class="btn-outline btn-block btn-success btn btn-rounded waves-effect waves-light" type="button" onclick="yearOfDay()">
+                YTD
+              </button>
+                    </li>
+                    <li style="padding-top: 12px">
+                        <div class="btn-group m-r-10">
+                            <button aria-expanded="false" data-toggle="dropdown" class="btn-outline btn-rounded btn btn-success dropdown-toggle waves-effect waves-light" type="button">
+                  Others <span class="caret"></span>
+                </button>
+                            <ul role="menu" class="dropdown-menu">
+                                <li><a href="#">Last YTD</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">MTD 1</a></li>
+                                <li><a href="#">MTD 2</a></li>
+                                <li><a href="#">MTD 3</a></li>
+                                <li><a href="#">MTD 4</a></li>
+                                <li><a href="#">MTD 5</a></li>
+                                <li><a href="#">MTD 6</a></li>
+                                <li><a href="#">MTD 7</a></li>
+                                <li><a href="#">MTD 8</a></li>
+                                <li><a href="#">MTD 9</a></li>
+                                <li><a href="#">MTD 10</a></li>
+                                <li><a href="#">MTD 11</a></li>
+                                <li><a href="#">MTD 12</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="right-side-toggle">
+                        <a class="right-side-toggler waves-effect waves-light b-r-0 font-20" href="javascript:void(0)">
+                            <i class="icon-question"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ===== Top-Navigation-End ===== -->
+        <!-- ===== Left-Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="scroll-sidebar">
+                <div class="user-profile">
+                    <div class="dropdown user-pro-body">
+                        <div class="profile-image">
+                            <img src="../plugins/images/users/pic.jpg" alt="user-img" class="img-circle" />
+                            <a href="javascript:void(0);" class="dropdown-toggle u-dropdown text-blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="badge badge-danger">
+                    <i class="fa fa-angle-down"></i>
+                  </span>
+                            </a>
+                            <ul class="dropdown-menu animated flipInY">
+                                <li>
+                                    <a href="javascript:void(0);"><i class="fa fa-user"></i> Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);"
+                      ><i class="fa fa-inbox"></i> Inbox</a
+                    >
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="javascript:void(0);"
+                      ><i class="fa fa-cog"></i> Account Settings</a
+                    >
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href=""><i class="fa fa-power-off"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="profile-text m-t-15 font-16">
+                            <a href="javascript:void(0);"> Huy Nguyen</a>
+                        </p>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul id="side-menu">
+                        <li>
+                            <a class="waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="fa fa-bar-chart-o fa-fw"></i>
+                  <span class="hide-menu">
+                    KPI Report
+                    <span class="label label-rounded label-success pull-right"
+                      >4</span
+                    ></span
+                  ></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="/Factory">Factory</a></li>
+                        <li><a href="#">Utility</a></li>
+                        <li><a href="#">Process</a></li>
+                        <li><a href="#">Packaging</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="icon-screen-desktop fa-fw"></i>
+                  <span class="hide-menu">
+                    Monitor<span
+                      class="label label-rounded label-success pull-right"
+                      >5</span
+                    ></span
+                  ></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="/Monitor/Main">Main Electrical Diagram</a></li>
+                    <li>
+                        <a href="/Monitor/Utility">Utility Electrical Diagram</a>
+                    </li>
+                    <li>
+                        <a href="/Monitor/Process">Process Electrical Diagram</a>
+                    </li>
+                    <li>
+                        <a href="/Monitor/Packaging">Packaging Electrical Diagram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/Monitor/Steam">Main Steam Diagram</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="/History" aria-expanded="false">
+                            <i class="icon-docs fa-fw"></i>
+                            <span class="hide-menu"> History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Alarm" aria-expanded="false">
+                            <i class="fa fa-exclamation-triangle fa-fw"></i>
+                            <span class="hide-menu"> Alarm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Report" aria-expanded="false">
+                            <i class="icon-link fa-fw"></i>
+                            <span class="hide-menu"> Report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Plan" aria-expanded="false">
+                            <i class="icon-grid fa-fw"></i>
+                            <span class="hide-menu"> Plan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Register" aria-expanded="false">
+                            <i class="icon-user fa-fw"></i>
+                            <span class="hide-menu"> Register</span>
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- ===== Left-Sidebar-End ===== -->
+        <!-- ===== Page-Content ===== -->
+        <div class="page-wrapper">
+            <!-- ===== Page-Container ===== -->
+            <div class="container-fluid">
+                <div class="row colorbox-group-widget">
+                    <div class="col-md-3 col-sm-6 info-color-box">
+                        <div class="white-box">
+                            <div class="media bg-success">
+                                <div class="media-body">
+                                    <h3 class="info-count" id="KPI_Electric">
+                                        <span class="pull-right"><i class="fa fa-bolt"></i></span>
+                                    </h3>
+                                    <p class="info-text font-12">Kwh / hl</p>
+                                    <p class="info-ot font-15">
+                                        KPI<span class="label label-rounded"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 info-color-box">
+                        <div class="white-box">
+                            <div class="media bg-success">
+                                <div class="media-body">
+                                    <h3 class="info-count" id="ActiveEnergy_Electric">
+                                        <span class="pull-right"><i class="fa fa-fire"></i></span>
+                                    </h3>
+                                    <p class="info-text font-12">KWH</p>
+                                    <p class="info-ot font-15">
+                                        Active Energy<span class="label label-rounded"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 info-color-box">
+                        <div class="white-box">
+                            <div class="media bg-success">
+                                <div class="media-body">
+                                    <h3 class="info-count" id="Beer_Electric">
+                                        <span class="pull-right"><i class="fa fa-tint"></i></span>
+                                    </h3>
+                                    <p class="info-text font-12">HL</p>
+                                    <p class="info-ot font-15">
+                                        Beer<span class="label label-rounded"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 info-color-box">
+                        <div class="white-box">
+                            <div class="media bg-success">
+                                <div class="media-body">
+                                    <h3 class="info-count" id="Cost">
+                                        <span class="pull-right"><i class="mdi mdi-coin"></i
+                      ></span>
+                                    </h3>
+                                    <p class="info-text font-12">VND</p>
+                                    <p class="info-ot font-15">
+                                        Electric Cost<span class="label label-rounded"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="white-box">
+                            <h3 class="box-title m-b-0">Tracking :</h3>
+                            <p class="text-muted m-b-20"></p>
+
+                            <p class="text-muted m-b-20"></p>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Area</th>
+                                            <th>Progress</th>
+                                            <th style="padding-left: 50px">Target (KWH/HL)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Utility</td>
+                                            <td>
+                                                <div class="progress progress-xs margin-vertical-10">
+                                                    <div class="progress-bar progress-bar-success" id="progressbar_Utility"></div>
+                                                </div>
+                                            </td>
+                                            <td style="padding-left: 50px">5.56</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Process</td>
+                                            <td>
+                                                <div class="progress progress-xs margin-vertical-10">
+                                                    <div class="progress-bar progress-bar-info" id="progressbar_Process"></div>
+                                                </div>
+                                            </td>
+                                            <td style="padding-left: 50px">0.64</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Packaging</td>
+                                            <td>
+                                                <div class="progress progress-xs margin-vertical-10">
+                                                    <div class="progress-bar progress-bar-danger" id="progressbar_Packaging"></div>
+                                                </div>
+                                            </td>
+                                            <td style="padding-left: 50px">1.62</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Different Electric Expenses :</h3>
+                            <div id="graph"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="white-box">
+                                <h3 class="box-title">KPI Line Chart</h3>
+                                <div id="myDiv">
+                                    <!-- Plotly chart will be drawn inside this DIV -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- ===== Right-Sidebar ===== -->
+                    <div class="right-sidebar">
+                        <div class="slimscrollright">
+                            <div class="rpanel-title">
+                                Service Panel
+                                <span><i class="icon-close right-side-toggler"></i></span>
+                            </div>
+                            <div class="r-panel-body">
+                                <ul class="hidden-xs">
+                                    <li><b>Layout Options</b></li>
+                                    <li>
+                                        <div class="checkbox checkbox-danger">
+                                            <input id="headcheck" type="checkbox" class="fxhdr" />
+                                            <label for="headcheck"> Fix Header </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="checkbox checkbox-warning">
+                                            <input id="sidecheck" type="checkbox" class="fxsdr" />
+                                            <label for="sidecheck"> Fix Sidebar </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul id="themecolors" class="m-t-20">
+                                    <li><b>With Light sidebar</b></li>
+                                    <li>
+                                        <a href="javascript:void(0)" data-theme="default" class="default-theme working">1</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="green"
+                        class="green-theme"
+                        >2</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="yellow"
+                        class="yellow-theme"
+                        >3</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="red"
+                        class="red-theme"
+                        >4</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="purple"
+                        class="purple-theme"
+                        >5</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="black"
+                        class="black-theme"
+                        >6</a
+                      >
+                    </li>
+                    <li class="db"><b>With Dark sidebar</b></li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="default-dark"
+                        class="default-dark-theme"
+                        >7</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="green-dark"
+                        class="green-dark-theme"
+                        >8</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="yellow-dark"
+                        class="yellow-dark-theme"
+                        >9</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="red-dark"
+                        class="red-dark-theme"
+                        >10</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="purple-dark"
+                        class="purple-dark-theme"
+                        >11</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0)"
+                        data-theme="black-dark"
+                        class="black-dark-theme"
+                        >12</a
+                      >
+                    </li>
+                  </ul>
+                  <ul class="m-t-20 chatonline">
+                    <li><b>Chat option</b></li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="../plugins/images/users/1.jpg"
+                          alt="user-img"
+                          class="img-circle"
+                        />
+                        <span
+                          >Varun Dhavan
+                          <small class="text-success">online</small></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="../plugins/images/users/2.jpg"
+                          alt="user-img"
+                          class="img-circle"
+                        />
+                        <span
+                          >Genelia Deshmukh
+                          <small class="text-warning">Away</small></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="../plugins/images/users/3.jpg"
+                          alt="user-img"
+                          class="img-circle"
+                        />
+                        <span
+                          >Ritesh Deshmukh
+                          <small class="text-danger">Busy</small></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="../plugins/images/users/4.jpg"
+                          alt="user-img"
+                          class="img-circle"
+                        />
+                        <span
+                          >Arijit Sinh
+                          <small class="text-muted">Offline</small></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="../plugins/images/users/5.jpg"
+                          alt="user-img"
+                          class="img-circle"
+                        />
+                        <span
+                          >Govinda Star
+                          <small class="text-success">online</small></span
+                        ></a
+                      >
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)"
+                        ><img
+                          src="../plugins/images/users/6.jpg"
+                          alt="user-img"
+                          class="img-circle"
+                        />
+                        <span
+                          >John Abraham<small class="text-success"
+                            >online</small
+                          ></span
+                        ></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- ===== Right-Sidebar-End ===== -->
+          </div>
+          <!-- ===== Page-Container-End ===== -->
+          <footer class="footer t-a-c">© 2021 NKengineering ltd .;</footer>
+        </div>
+        <!-- ===== Page-Content-End ===== -->
+      </div>
+    </div>
+    <!-- ===== Main-Wrapper-End ===== -->
+    <!-- ==============================
+        Required JS Files
+    =============================== -->
+    <!-- ===== jQuery ===== -->
+    <script src="./plugins/components/jquery/dist/jquery.min.js"></script>
+    <!-- ===== Bootstrap JavaScript ===== -->
+    <script src="./bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- ===== Slimscroll JavaScript ===== -->
+    <script src="./js/jquery.slimscroll.js"></script>
+    <!-- ===== Wave Effects JavaScript ===== -->
+    <script src="./js/waves.js"></script>
+    <!-- ===== Menu Plugin JavaScript ===== -->
+    <script src="./js/sidebarmenu.js"></script>
+    <!-- ===== Custom JavaScript ===== -->
+    <script src="./js/custom.js"></script>
+    <!-- ===== Plugin JS ===== -->
+    <script src="./plugins/components/chartist-js/dist/chartist.min.js"></script>
+    <script src="./plugins/components/moment/moment.js"></script>
+    <script src="./plugins/components/fullcalendar/fullcalendar.js"></script>
+
+    <script src="./js/dashboard_electric.js"></script>
+
+    <!-- ===== Style Switcher JS ===== -->
+    <script src="./plugins/components/styleswitcher/jQuery.style.switcher.js"></script>
+    <!--Morris JavaScript -->
+    <script src="./plugins/components/raphael/raphael-min.js"></script>
+    <script src="./plugins/components/morrisjs/morris.js"></script>
+    <script src="./js/morris-data.js"></script>
+    <!-- jQuery peity -->
+    <script src="./plugins/components/sparkline/jquery.sparkline.min.js"></script>
+    <script src="./plugins/components/sparkline/jquery.charts-sparkline.js"></script>
+
+    <!-- 30082021 -->
+    <script src="./dist/apexcharts.min.js"></script>
+  </body>
+</html>

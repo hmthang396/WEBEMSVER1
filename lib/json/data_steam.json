@@ -1,0 +1,281 @@
+[{
+        "date": 1,
+        "KPI": 9.77,
+        "ActiveEnergy": 228.58,
+        "Beer": 15185.2,
+        "Utility": 0.06,
+        "Process": 4.21,
+        "Packaging": 6.74
+    },
+    {
+        "date": 2,
+        "KPI": 9.98,
+        "ActiveEnergy": 159.22,
+        "Beer": 10354.04,
+        "Utility": 0.1,
+        "Process": 4.39,
+        "Packaging": 9.08
+    },
+    {
+        "date": 3,
+        "KPI": 12.52,
+        "ActiveEnergy": 146.18,
+        "Beer": 7577.46,
+        "Utility": 0.08,
+        "Process": 6.36,
+        "Packaging": 11.13
+    },
+    {
+        "date": 4,
+        "KPI": 13.94,
+        "ActiveEnergy": 120.48,
+        "Beer": 5611.44,
+        "Utility": 0.08,
+        "Process": 6.84,
+        "Packaging": 12.43
+    },
+    {
+        "date": 5,
+        "KPI": 11.51,
+        "ActiveEnergy": 85.82,
+        "Beer": 4839.3,
+        "Utility": 0.12,
+        "Process": 0.44,
+        "Packaging": 8.6
+    },
+    {
+        "date": 6,
+        "KPI": 11.37,
+        "ActiveEnergy": 119.03,
+        "Beer": 6796.71,
+        "Utility": 0.06,
+        "Process": 1.03,
+        "Packaging": 8.92
+    },
+    {
+        "date": 7,
+        "KPI": 13.91,
+        "ActiveEnergy": 169.42,
+        "Beer": 7903.46,
+        "Utility": 0.06,
+        "Process": 6.98,
+        "Packaging": 12.89
+    },
+    {
+        "date": 8,
+        "KPI": 12.41,
+        "ActiveEnergy": 162.67,
+        "Beer": 8507.86,
+        "Utility": 0.07,
+        "Process": 5.13,
+        "Packaging": 11.83
+    },
+    {
+        "date": 9,
+        "KPI": 11.93,
+        "ActiveEnergy": 157.21,
+        "Beer": 8552.58,
+        "Utility": 0.08,
+        "Process": 4.88,
+        "Packaging": 11.52
+    },
+
+    {
+        "date": 10,
+        "KPI": 10.43,
+        "ActiveEnergy": 178.88,
+        "Beer": 11129.0,
+        "Utility": 0.07,
+        "Process": 4.8,
+        "Packaging": 10.15
+    },
+    {
+        "date": 11,
+        "KPI": 7.62,
+        "ActiveEnergy": 111.11,
+        "Beer": 9466.68,
+        "Utility": 0.11,
+        "Process": 1.82,
+        "Packaging": 5.95
+    },
+    {
+        "date": 12,
+        "KPI": 11.48,
+        "ActiveEnergy": 163.18,
+        "Beer": 9228.82,
+        "Utility": 0.11,
+        "Process": 5.77,
+        "Packaging": 10.05
+    },
+    {
+        "date": 13,
+        "KPI": 10.16,
+        "ActiveEnergy": 161.16,
+        "Beer": 10300.31,
+        "Utility": 0.1,
+        "Process": 4.73,
+        "Packaging": 9.24
+    },
+    {
+        "date": 14,
+        "KPI": 9.56,
+        "ActiveEnergy": 158.93,
+        "Beer": 10794.57,
+        "Utility": 0.1,
+        "Process": 4.19,
+        "Packaging": 8.98
+    },
+    {
+        "date": 15,
+        "KPI": 8.51,
+        "ActiveEnergy": 52013.3,
+        "Beer": 11020.36,
+        "Utility": 0.1,
+        "Process": 2.63,
+        "Packaging": 8.01
+    },
+    {
+        "date": 16,
+        "KPI": 15.05,
+        "ActiveEnergy": 144.4,
+        "Beer": 6586.83,
+        "Utility": 0.05,
+        "Process": 6.05,
+        "Packaging": 13.41
+    },
+    {
+        "date": 17,
+        "KPI": 11.98,
+        "ActiveEnergy": 152.71,
+        "Beer": 10333.3,
+        "Utility": 0.06,
+        "Process": 4.63,
+        "Packaging": 11.67
+    },
+    {
+        "date": 18,
+        "KPI": 11.08,
+        "ActiveEnergy": 190.62,
+        "Beer": 11125.67,
+        "Utility": 0.06,
+        "Process": 4.53,
+        "Packaging": 11.38
+    },
+    {
+        "date": 19,
+        "KPI": 14.56,
+        "ActiveEnergy": 189.98,
+        "Beer": 7217.66,
+        "Utility": 0.9,
+        "Process": 7.23,
+        "Packaging": 15.31
+    },
+    {
+        "date": 20,
+        "KPI": 10.06,
+        "ActiveEnergy": 161.93,
+        "Beer": 9893.09,
+        "Utility": 0.1,
+        "Process": 2.79,
+        "Packaging": 10.36
+    },
+    {
+        "date": 21,
+        "KPI": 10.56,
+        "ActiveEnergy": 153.38,
+        "Beer": 11039.23,
+        "Utility": 0.09,
+        "Process": 4.18,
+        "Packaging": 10.56
+    },
+    {
+        "date": 22,
+        "KPI": 8.7,
+        "ActiveEnergy": 179.56,
+        "Beer": 10281.78,
+        "Utility": 0.1,
+        "Process": 1.97,
+        "Packaging": 8.72
+    },
+    {
+        "date": 23,
+        "KPI": 10.3,
+        "ActiveEnergy": 137.82,
+        "Beer": 10711.2,
+        "Utility": 0.09,
+        "Process": 3.65,
+        "Packaging": 10.59
+    },
+    {
+        "date": 24,
+        "KPI": 9.61,
+        "ActiveEnergy": 169.99,
+        "Beer": 11063.0,
+        "Utility": 0.09,
+        "Process": 3.78,
+        "Packaging": 9.91
+    },
+    {
+        "date": 25,
+        "KPI": 12.12,
+        "ActiveEnergy": 163.84,
+        "Beer": 7298.3,
+        "Utility": 0.1,
+        "Process": 6.31,
+        "Packaging": 12.4
+    },
+    {
+        "date": 26,
+        "KPI": 15.69,
+        "ActiveEnergy": 139.81,
+        "Beer": 5783.8,
+        "Utility": 0.08,
+        "Process": 7.98,
+        "Packaging": 16.05
+    },
+    {
+        "date": 27,
+        "KPI": 15.04,
+        "ActiveEnergy": 133.42,
+        "Beer": 5783.8,
+        "Utility": 0.08,
+        "Process": 7.5,
+        "Packaging": 14.32
+    },
+    {
+        "date": 28,
+        "KPI": 10.73,
+        "ActiveEnergy": 117.33,
+        "Beer": 8098.5,
+        "Utility": 0.08,
+        "Process": 3.62,
+        "Packaging": 9.98
+    },
+    {
+        "date": 29,
+        "KPI": 7.29,
+        "ActiveEnergy": 68.59,
+        "Beer": 6104.4,
+        "Utility": 0.09,
+        "Process": 0.35,
+        "Packaging": 5.4
+    },
+    {
+        "date": 30,
+        "KPI": 7.0,
+        "ActiveEnergy": 75.18,
+        "Beer": 6969.83,
+        "Utility": 0.08,
+        "Process": 0.31,
+        "Packaging": 6.28
+    },
+    {
+        "date": 31,
+        "KPI": 8.68,
+        "ActiveEnergy": 69.41,
+        "Beer": 5189.5,
+        "Utility": 0.1,
+        "Process": 0.41,
+        "Packaging": 11.12
+    }
+]

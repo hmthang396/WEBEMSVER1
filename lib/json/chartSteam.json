@@ -1,0 +1,146 @@
+[{
+        "id": 1,
+        "Mass_Flow": 1500.13,
+        "Totalizer": 72071.82
+    },
+    {
+        "id": 2,
+        "Mass_Flow": 1501.34,
+        "Totalizer": 72072.06
+    },
+    {
+        "id": 3,
+        "Mass_Flow": 1502.63,
+        "Totalizer": 72072.32
+    },
+    {
+        "id": 4,
+        "Mass_Flow": 1502.28,
+        "Totalizer": 72072.56
+    },
+    {
+        "id": 5,
+        "Mass_Flow": 1502.51,
+        "Totalizer": 72072.79
+    },
+    {
+        "id": 6,
+        "Mass_Flow": 1502.1,
+        "Totalizer": 72073.01
+    },
+    {
+        "id": 7,
+        "Mass_Flow": 1502.21,
+        "Totalizer": 72073.28
+    },
+    {
+        "id": 8,
+        "Mass_Flow": 1502.71,
+        "Totalizer": 72073.41
+    },
+    {
+        "id": 9,
+        "Mass_Flow": 1502.72,
+        "Totalizer": 72073.65
+    },
+    {
+        "id": 10,
+        "Mass_Flow": 1502.0,
+        "Totalizer": 72073.93
+    },
+    {
+        "id": 11,
+        "Mass_Flow": 1501.93,
+        "Totalizer": 72074.18
+    },
+    {
+        "id": 12,
+        "Mass_Flow": 1501.99,
+        "Totalizer": 72074.32
+    },
+    {
+        "id": 13,
+        "Mass_Flow": 1502.03,
+        "Totalizer": 72074.5
+    },
+    {
+        "id": 14,
+        "Mass_Flow": 1502.11,
+        "Totalizer": 72074.79
+    },
+    {
+        "id": 15,
+        "Mass_Flow": 1502.21,
+        "Totalizer": 72074.98
+    },
+    {
+        "id": 16,
+        "Mass_Flow": 1502.01,
+        "Totalizer": 72075.1
+    },
+    {
+        "id": 17,
+        "Mass_Flow": 1502.62,
+        "Totalizer": 72075.33
+    },
+    {
+        "id": 18,
+        "Mass_Flow": 1071.91,
+        "Totalizer": 72075.4
+    },
+    {
+        "id": 20,
+        "Mass_Flow": 568.47,
+        "Totalizer": 72075.44
+    },
+    {
+        "id": 21,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 22,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 23,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 24,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 25,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 26,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 27,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 28,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 29,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    },
+    {
+        "id": 30,
+        "Mass_Flow": 0,
+        "Totalizer": 72075.47
+    }
+]

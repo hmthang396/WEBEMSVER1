@@ -1,0 +1,49 @@
+[{
+        "month": 0,
+        "KPI": 2.06
+    },
+    {
+        "month": 1,
+        "KPI": 2.31
+    },
+    {
+        "month": 2,
+        "KPI": 2.57
+    },
+    {
+        "month": 3,
+        "KPI": 2.51
+    },
+    {
+        "month": 4,
+        "KPI": 2.19
+    },
+    {
+        "month": 5,
+        "KPI": 2.24
+    },
+    {
+        "month": 6,
+        "KPI": 2.12
+    },
+    {
+        "month": 7,
+        "KPI": 1.4
+    },
+    {
+        "month": 8,
+        "KPI": null
+    },
+    {
+        "month": 9,
+        "KPI": null
+    },
+    {
+        "month": 10,
+        "KPI": null
+    },
+    {
+        "month": 11,
+        "KPI": null
+    }
+]

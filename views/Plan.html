@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/logo.jpg" />
+    <title>NK Energy Management</title>
+    <!-- ===== Bootstrap CSS ===== -->
+    <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- ===== Plugin CSS ===== -->
+    <link href="../../plugins/components/morrisjs/morris.css" rel="stylesheet" />
+    <link href="../../plugins/components/chartist-js/dist/chartist.min.css" rel="stylesheet" />
+    <link href="../../plugins/components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet" />
+    <link href="../../plugins/components/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- ===== Animation CSS ===== -->
+    <link href="../css/animate.css" rel="stylesheet" />
+    <!-- ===== Custom CSS ===== -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <!-- ===== Color CSS ===== -->
+    <link href="../css/colors/black-dark.css" id="theme" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+</head>
+
+<body class="mini-sidebar">
+    <!-- ===== Main-Wrapper ===== -->
+    <div id="wrapper">
+        <div class="preloader">
+            <div class="cssload-speeding-wheel"></div>
+        </div>
+        <!-- ===== Top-Navigation ===== -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <a class="navbar-toggle font-20 hidden-sm hidden-md hidden-lg" href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <div class="top-left-part">
+                    <a class="logo" href="/">
+                        <b>
+                <img
+                  src="../plugins/images/huda-logo.jpg"
+                  alt="home"
+                  height="60"
+                  style="padding-left: 20px"
+                />
+              </b>
+                        <span>
+                <img
+                  src="../plugins/images/logo.jpg"
+                  alt="homepage"
+                  class="dark-logo"
+                  height="60"
+                  style="padding-left: 70px"
+                />
+              </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- ===== Top-Navigation-End ===== -->
+        <!-- ===== Left-Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="scroll-sidebar">
+                <div class="user-profile">
+                    <div class="dropdown user-pro-body">
+                        <div class="profile-image">
+                            <img src="../plugins/images/users/pic.jpg" alt="user-img" class="img-circle" />
+                            <a href="javascript:void(0);" class="dropdown-toggle u-dropdown text-blue" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="badge badge-danger">
+                    <i class="fa fa-angle-down"></i>
+                  </span>
+                            </a>
+                            <ul class="dropdown-menu animated flipInY">
+                                <li>
+                                    <a href="javascript:void(0);"><i class="fa fa-user"></i> Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);"
+                      ><i class="fa fa-inbox"></i> Inbox</a
+                    >
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="javascript:void(0);"
+                      ><i class="fa fa-cog"></i> Account Settings</a
+                    >
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href=""><i class="fa fa-power-off"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="profile-text m-t-15 font-16">
+                            <a href="javascript:void(0);"> Huy Nguyen</a>
+                        </p>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul id="side-menu">
+                        <li>
+                            <a class="waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="fa fa-bar-chart-o fa-fw"></i>
+                  <span class="hide-menu">
+                    KPI Report
+                    <span class="label label-rounded label-success pull-right"
+                      >4</span
+                    ></span
+                  ></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="/Factory">Factory</a></li>
+                        <li><a href="#">Utility</a></li>
+                        <li><a href="#">Process</a></li>
+                        <li><a href="#">Packaging</a></li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="javascript:void(0);" aria-expanded="false"><i class="icon-screen-desktop fa-fw"></i>
+                  <span class="hide-menu">
+                    Monitor<span
+                      class="label label-rounded label-success pull-right"
+                      >5</span
+                    ></span
+                  ></a
+                >
+                <ul aria-expanded="false" class="collapse">
+                  <li><a href="/Monitor/Main">Main Electrical Diagram</a></li>
+                    <li>
+                        <a href="/Monitor/Utility">Utility Electrical Diagram</a>
+                    </li>
+                    <li>
+                        <a href="/Monitor/Process">Process Electrical Diagram</a>
+                    </li>
+                    <li>
+                        <a href="/Monitor/Packaging">Packaging Electrical Diagram</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/Monitor/Steam">Main Steam Diagram</a>
+                    </li>
+                    </ul>
+                    </li>
+                    <li>
+                        <a href="/History" aria-expanded="false">
+                            <i class="icon-docs fa-fw"></i>
+                            <span class="hide-menu"> History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Alarm" aria-expanded="false">
+                            <i class="fa fa-exclamation-triangle fa-fw"></i>
+                            <span class="hide-menu"> Alarm</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Report" aria-expanded="false">
+                            <i class="icon-link fa-fw"></i>
+                            <span class="hide-menu"> Report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Plan" aria-expanded="false">
+                            <i class="icon-grid fa-fw"></i>
+                            <span class="hide-menu"> Plan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Register" aria-expanded="false">
+                            <i class="icon-user fa-fw"></i>
+                            <span class="hide-menu"> Register</span>
+                        </a>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- ===== Left-Sidebar-End ===== -->
+        <!-- ===== Page-Content ===== -->
+        <div class="page-wrapper">
+            <!-- ===== Page-Container ===== -->
+            <div class="container-fluid">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Import Plan</div>
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body">
+                                <form id="form">
+                                    <div class="form-body">
+                                        <div class="row">
+                                            <!-- -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Area</label>
+                                                    <input type="file" class="form-control" required id="file" />
+                                                </div>
+                                            </div>
+                                            <!-- -->
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-success">
+                        <i class="fa fa-check"></i> Import
+                      </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">Plan</div>
+                        <div class="panel-wrapper collapse in">
+                            <div class="panel-body" id="plan" style="display: none">
+                                <table style="text-align: center" class="tablesaw table-bordered table-hover table" data-tablesaw-mode="swipe" data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap data-tablesaw-mode-switch>
+                                    <thead style="text-align: center">
+                                        <tr style="text-align: center">
+                                            <th style="text-align: center" colspan="8" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="">
+                                                Electricity, KWH
+                                            </th>
+                                        </tr>
+                                        <tr style="text-align: center">
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="0">
+                                                #
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="1">
+                                                Mo
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2">
+                                                Tu
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                                                We
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
+                                                Th
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="5">
+                                                Fr
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="6">
+                                                Sa
+                                            </th>
+                                            <th style="text-align: center" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="7">
+                                                Su
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="text-align: center">
+                                        <tr>
+                                            <td>L1</td>
+                                            <td>5,670.00</td>
+                                            <td>5,670.00</td>
+                                            <td>4,410.00</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L2</td>
+                                            <td>2,178.00</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>5,742.00</td>
+                                            <td>6,831.00</td>
+                                            <td>6,831.00</td>
+                                            <td>6,831.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L3</td>
+                                            <td>3,706.56</td>
+                                            <td>3,706.56</td>
+                                            <td>3,706.56</td>
+                                            <td>3,706.56</td>
+                                            <td>3,706.56</td>
+                                            <td>570.24</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L4</td>
+                                            <td>4,159.18</td>
+                                            <td>4,199.58</td>
+                                            <td>4,199.58</td>
+                                            <td>4,079.39</td>
+                                            <td>2,404.81</td>
+                                            <td>3,636.00</td>
+                                            <td>4,087.47</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L5</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>2,681.40</td>
+                                            <td>4,022.09</td>
+                                            <td>4,022.09</td>
+                                            <td>671.83</td>
+                                        </tr>
+                                        <tr>
+                                            <td>L6</td>
+                                            <td>54.00</td>
+                                            <td>98.00</td>
+                                            <td>112.00</td>
+                                            <td>114.00</td>
+                                            <td>114.00</td>
+                                            <td>114.00</td>
+                                            <td>114.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cooling Plant</td>
+                                            <td>18,845.86</td>
+                                            <td>17,305.66</td>
+                                            <td>16,258.46</td>
+                                            <td>11,900.00</td>
+                                            <td>16,063.50</td>
+                                            <td>13,692.68</td>
+                                            <td>12,568.10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Air</td>
+                                            <td>7,205.77</td>
+                                            <td>6,616.87</td>
+                                            <td>6,216.47</td>
+                                            <td>6,733.14</td>
+                                            <td>6,141.93</td>
+                                            <td>5,235.44</td>
+                                            <td>4,805.45</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CO2 Recovery</td>
+                                            <td>6,784.51</td>
+                                            <td>6,230.04</td>
+                                            <td>5,853.05</td>
+                                            <td>6,339.51</td>
+                                            <td>5,782.86</td>
+                                            <td>4,929.37</td>
+                                            <td>4,524.52</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Water Treatment</td>
+                                            <td>1,662.87</td>
+                                            <td>1,526.97</td>
+                                            <td>1,434.57</td>
+                                            <td>1,553.80</td>
+                                            <td>1,417.37</td>
+                                            <td>1,208.18</td>
+                                            <td>1,108.95</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WWTP</td>
+                                            <td>2,993.17</td>
+                                            <td>2,748.55</td>
+                                            <td>2,582.23</td>
+                                            <td>2,796.84</td>
+                                            <td>2,551.26</td>
+                                            <td>2,174.72</td>
+                                            <td>1,996.11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Utility</td>
+                                            <td>3,325.74</td>
+                                            <td>3,053.94</td>
+                                            <td>2,869.14</td>
+                                            <td>3,107.60</td>
+                                            <td>2,834.74</td>
+                                            <td>2,416.36</td>
+                                            <td>2,217.90</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Other low cap</td>
+                                            <td>1,108.58</td>
+                                            <td>1,017.98</td>
+                                            <td>956.38</td>
+                                            <td>1,035.87</td>
+                                            <td>944.91</td>
+                                            <td>805.45</td>
+                                            <td>739.30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>BH</td>
+                                            <td>4,988.61</td>
+                                            <td>4,580.91</td>
+                                            <td>4,303.71</td>
+                                            <td>3,150.00</td>
+                                            <td>4,252.10</td>
+                                            <td>3,624.53</td>
+                                            <td>3,326.85</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hL Filtrered</td>
+                                            <td>2,261.50</td>
+                                            <td>2,076.68</td>
+                                            <td>1,951.02</td>
+                                            <td>2,113.17</td>
+                                            <td>1,927.62</td>
+                                            <td>1,643.12</td>
+                                            <td>1,508.17</td>
+                                        </tr>
+                                        <tr>
+                                            <td>hL Pack</td>
+                                            <td>64,944.35</td>
+                                            <td>58,831.73</td>
+                                            <td>54,853.16</td>
+                                            <td>55,053.29</td>
+                                            <td>58,994.76</td>
+                                            <td>50,903.18</td>
+                                            <td>44,499.65</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- .row -->
+                <!-- ===== Page-Container-End ===== -->
+                <footer class="footer t-a-c">© 2021 NKengineering ltd .;</footer>
+            </div>
+            <!-- ===== Page-Content-End ===== -->
+        </div>
+    </div>
+    <!-- ===== Main-Wrapper-End ===== -->
+    <!-- ==============================
+        Required JS Files
+    =============================== -->
+
+    <!-- ===== jQuery ===== -->
+    <script src="../../plugins/components/jquery/dist/jquery.min.js"></script>
+    <!-- ===== Bootstrap JavaScript ===== -->
+    <script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- ===== Slimscroll JavaScript ===== -->
+    <script src="../../js/jquery.slimscroll.js"></script>
+    <!-- ===== Wave Effects JavaScript ===== -->
+    <script src="../../js/waves.js"></script>
+    <!-- ===== Menu Plugin JavaScript ===== -->
+    <script src="../../js/sidebarmenu.js"></script>
+    <!-- ===== Custom JavaScript ===== -->
+    <script src="../../js/custom.js"></script>
+    <!-- ===== Plugin JS ===== -->
+    <script src="../../plugins/components/chartist-js/dist/chartist.min.js"></script>
+    <script src="../../plugins/components/moment/moment.js"></script>
+    <script src="../../plugins/components/fullcalendar/fullcalendar.js"></script>
+
+    <!-- ===== Style Switcher JS ===== -->
+    <script src="../../plugins/components/styleswitcher/jQuery.style.switcher.js"></script>
+    <!--Morris JavaScript -->
+    <script src="../../plugins/components/raphael/raphael-min.js"></script>
+    <script src="../../plugins/components/morrisjs/morris.js"></script>
+    <script src="../../js/morris-data.js"></script>
+    <!-- jQuery peity -->
+    <script src="../../plugins/components/sparkline/jquery.sparkline.min.js"></script>
+    <script src="../../plugins/components/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- 30082021 -->
+    <script src="../../js/Plan.js"></script>
+</body>
+
+</html>
