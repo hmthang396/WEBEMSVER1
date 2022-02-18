@@ -9,6 +9,7 @@ app.use(express.static(publicDirectoryPath2));
 router.get("/Alarm", function(req, res) {
     res.sendFile(path.join(__dirname + "/views/demo-alarm.html"));
 });
+var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 router.get("/Views", function(req, res) {
@@ -95,6 +96,6 @@ router.post("/api/v2", function(req, res) {
 });
 
 app.use("/", router);
-app.listen(process.env.port || 3000,()=>{
-	console.log("Server is up on port 3000.");
+app.listen(port, () => {
+    console.log("Server is up on port 3000.");
 });
